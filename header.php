@@ -25,8 +25,8 @@
 			<header>
 				<section>
 					<article class="action">
-						<a href="http://ucf.collegiatelink.net/organization/vucf" target="_blank"><div class="button">Sign Up!</div></a>
-						<a href="<?php echo site_url('/about/'); ?>"><div class="button">Learn More!</div></a>
+						<div id="signup" style="letter-spacing:2px;font-size:30px;color:#df691c;cursor:pointer;font-family:malam;">Sign Up!</div>
+						<div id="about" style="letter-spacing:2px;font-size:30px;color:#df691c;font-family:malam;cursor:pointer;">Learn More!</div>
 					</article>
 				</section>
 				<nav class="main-menu full">
@@ -59,7 +59,7 @@
 
 					</ul>
 				</nav>
-				<style type="text/css">
+<style type="text/css">
 @font-face {
  font-family: malam;
  src: url("<?php echo get_stylesheet_directory_uri(); ?>/resources/malam.eot") /* EOT file for IE */
@@ -69,5 +69,16 @@
  src: url("<?php echo get_stylesheet_directory_uri(); ?>/resources/malam.ttf") /* TTF file for CSS3 browsers */
 }
 </style>
+<script type="text/javascript" src="<?php bloginfo("template_url"); ?>/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#signup").on("click", function() {
+        window.open("http://ucf.collegiatelink.net/organization/vucf");
+    });
+    $("#about").on("click", function() {
+        window.open("<?php echo site_url('/about/'); ?>");
+    });
+ });
+</script>
 			</header>
 <!-- HEADER END -->
