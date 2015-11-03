@@ -1,27 +1,875 @@
 /*!
- Theme Name: MiniBill
+ Theme Name: VUCF
  Theme URI: http://github.com/billcolumbia/MiniBill
- Description: A minimal starting point for WordPress, adapted from Underscores.me
- Author: Bill Columbia, AJ Foster
- Author URI: http://billcolumbia.com, http://aj-foster.com
- Version: 0.91
- Tags: minimal, fast, light
- License: None, feel free to hack :)
+ Description: VUCF's Theme
+ Author: JP Costallos, AJ Foster
+ Author URI: http://jpcostallos.com, http://aj-foster.com
  */
 
-// Change this to whatever you'd like. This is just the defualt so we 
-// have something nice to prototype with.
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700")
 
-// Necessary imports, feel free to explore and hack though :)
-@import reset, menu, buttons, footer
+@import reset, menu, buttons, footer, calendar, variables
 
 // Base variables
-$baseTypeFace: 'Open Sans', sans-serif
+$serifType: "Calluna", serif
+$sansType: "calluna-sans", sans-serif
+$maxWidth: 1000px
+
+$main: #515151
+$dark: #363636
+$accent: #df691c
+$base: #eeeeee
 
 // Base layout/type
+
 html
 	font-size: 16px
+	height: 100%
 body
-	font: 62.5%/1.5 $baseTypeFace
-	font-weight: 600 
+	background: $main 
+	font: 62.5%/1.5 $serifType
+	font-weight: 400
+	height: 100%
+	min-height: 100%
+.page
+	background: $base
+	
+// Clearfix
+
+%clearfix
+	zoom: 1
+	&:before, &:after
+		content: ""
+		display: table 
+	&:after
+		clear: both
+
+// Disclaimer:
+
+.content-area p.disclaimer
+	clear: both
+	font-size: 1.2em
+	width: 100%
+		
+// Outline Fix
+
+a:focus
+	outline: none
+	
+// Button Styles
+
+.button
+	background: #df691c
+	border-radius: 3px
+	box-shadow: 2px 3px 1px #a75312
+	color: #ffffff
+	cursor: pointer
+	display: inline-block
+	font-family: $sansType
+	font-size: 1.6em
+	font-weight: 300
+	letter-spacing: 1px
+	padding: 10px
+	text-align: center
+	text-decoration: none
+	vertical-align: middle
+	width: 9em
+
+	&:hover
+		box-shadow: 1px 2px 1px #a75312
+		position: relative
+		left: 1px
+		top: 1px
+	
+// Header Styles
+
+header
+	background-image: url("resources/chalkboard.jpg")
+	background-image: url("resources/glow.png"), url("resources/chalkboard.jpg")
+	background-repeat: no-repeat
+	background-position: center
+	background-position: center center, center center
+	background-size: 100% 100%, cover
+	
+	.logo
+		background: url("resources/sprite.png") no-repeat
+		background-position-x: 0px
+		background-position-y: -150px
+		background-position: 0 -150px 
+		height: 99px
+		margin: 0 0 4em 0
+		text-indent: -10000px
+		width: 430px
+		
+	p
+		color: #ffffff
+		//background: rgb(43, 64, 114)
+		background: rgba(36, 77, 124, 0.7)
+		border-radius: 5px
+		font-family: $serifType
+		font-size: 2em
+		font-style: italic
+		font-weight: 400
+		line-height: 1.8
+		padding: 20px
+		width: 420px
+	
+	section
+		max-width: 1000px
+		margin: auto
+		padding: 2em 1em
+		position: relative
+		@extend %clearfix
+		
+	article
+		float: left
+		height: 100%
+	
+	.info
+		width: 430px
+	
+	.action
+		float: right
+		padding-top: 4em
+		text-align: right
+	
+	.button
+		margin: 0 0.5em
+		
+// Links to ABP and KGB
+
+.icons
+	position: absolute
+	bottom: 0
+	right: 1em
+	//text-align: right
+	height: auto
+	width: 315px
+.kgb, .abp
+	background: url(resources/sprite.png) no-repeat
+	display: inline-block
+	height: 110px
+	text-indent: -10000px
+.kgb
+	background-position-x: -130px
+	background-position-y: -300px
+	background-position: -130px -300px
+	height: 90px
+	margin-right: 10px
+	width: 200px 
+.abp
+	background-position-x: 0px
+	background-position-y: -300px
+	background-position: 0 -300px
+	width: 100px
+
+// Navigation Styles
+
+nav
+	background: $main
+	display: block
+	width: 100%
+	font-size: 1.6em
+	
+	ul
+		background: $main
+		margin: auto
+		text-align: center
+	li
+		display: inline-block
+		margin: 0
+		
+	.current
+		background: $dark 
+	a
+		color: #ffffff
+		font-size: 1.25em
+		font-weight: 400
+		letter-spacing: 2
+		padding: 0.5em 2.5em
+		text-decoration: none
+		
+		-webkit-transition: background 0.3s 
+		-moz-transition: background 0.3s 
+		-ms-transition: background 0.3s 
+		-o-transition: background 0.3s 
+		transition: background 0.3s 
+		
+		&:hover
+			background: $dark 
+			
+// Main Page Content
+
+.content-area
+	font-size: 1.2em
+	padding: 6em 1em
+	margin: auto
+	max-width: 1000px
+	@extend %clearfix
+	
+	.main-text
+		margin: 0
+	
+	h1
+		font-size: 3em
+		font-weight: 600
+		//margin-bottom: 5em
+		
+	h2
+		font-size: 2em
+		font-weight: 600
+		
+	h4
+		font-family: $sansType
+		font-size: 2em
+		margin-bottom: 2em
+		
+	article
+		margin: 6em 0
+			
+	p
+		font-family: $sansType
+		font-size: 1.6em
+		margin: 1em 0
+		
+	p#alert
+		background: $accent
+		border-radius: 3px
+		padding: 5px
+		font-weight: 400 
+		
+	.update p
+		padding-left: 50px
+			
+	.event 
+		padding-left: 60px
+		position: relative
+		
+		.date
+			position: absolute
+			left: 0
+			top: 5px
+			
+	a
+		color: $dark
+		text-decoration: none
+		
+		-webkit-transition: color 0.3s 
+		-moz-transition: color 0.3s 
+		-ms-transition: color 0.3s 
+		-o-transition: color 0.3s 
+		transition: color 0.3s 
+		
+		&:hover
+			color: $main
+		
+
+// Footer Styles (aside from footer.sass)
+
+footer
+	background: $main
+	color: #ffffff
+	font-family: $sansType
+	font-size: 1.6em
+	font-weight: 300
+	text-align: center
+	width: 100%
+	
+	p
+		margin-top: 2em
+		
+
+
+
+// Home Page
+
+.page-home
+
+	section.updates, section.events
+		float: left
+		width: 50%
+		
+	section.updates
+		padding-right: 3em
+		
+	section.events
+		padding-left: 3em
+		
+	.update, .event
+		margin: 6em 0
+
+	.update
+		clear: left
+		
+		h2
+			background: url(resources/sprite.png) no-repeat left
+			background-position-x: -760px
+			background-position-y: -658px
+			background-position: -760px -658px
+			min-height: 40px
+			padding-left: 50px
+	
+	.event
+		clear: right
+		
+		h2
+			display: inline-block
+			min-height: 50px
+			
+// About Page
+
+$num_interests: 12
+
+.page-about
+
+	.main-text
+		margin-bottom: 6em
+		
+	.interest
+		float: left
+		margin-bottom: 0
+		min-height: 16em
+		padding-left: 110px
+		position: relative
+		width: 50%
+		
+		.icon
+			background: url(resources/sprite.png)
+			background-position-x: center
+			background-repeat: no-repeat
+			//float: left
+			height: 100px
+			margin-right: 1em
+			position: absolute
+			left: 0
+			
+			-webkit-transition: all .2s ease-in-out 
+			-moz-transition: all .2s ease-in-out 
+			-ms-transition: all .2s ease-in-out 
+			-o-transition: all .2s ease-in-out 
+			transition: all .2s ease-in-out 
+			
+			width: 100px
+			
+			&:hover
+				-webkit-transform: scale(1.1) rotate(10deg)
+				-moz-transform: scale(1.1) rotate(10deg)
+				-ms-transform: scale(1.1) rotate(10deg)
+				-o-transform: scale(1.1) rotate(10deg)
+				transform: scale(1.1) rotate(10deg)
+		
+	.interest:nth-child(2n)
+		clear: left
+		float: left
+		padding-right: 3em
+		
+	.interest:nth-child(2n+1)
+		clear: right
+		float: right
+		padding-left: 146px
+		.icon
+			left: 36px
+		
+	.icon.alternative-break-program
+		background-position-x: -500px
+		background-position-y: -150px
+		background-position: -500px -150px
+		
+	.icon.animal-awareness
+		background-position-x: -500px
+		background-position-y: -250px
+		background-position: -500px -250px
+		
+	.icon.arts-recreation
+		background-position-x: -500px
+		background-position-y: -350px
+		background-position: -500px -350px
+		
+	.icon.different-abilities
+		background-position-x: -500px
+		background-position-y: -450px
+		background-position: -500px -450px
+		
+	.icon.domestic-violence
+		background-position-x: -600px
+		background-position-y: -150px
+		background-position: -600px -150px
+		
+	.icon.education-literacy
+		background-position-x: -600px
+		background-position-y: -250px
+		background-position: -600px -250px
+		
+	.icon.elderly-veterans
+		background-position-x: -600px
+		background-position-y: -350px
+		background-position: -600px -350px
+		
+	.icon.environment
+		background-position-x: -600px
+		background-position-y: -450px
+		background-position: -600px -450px
+		
+	.icon.environment
+		background-position-x: -600px
+		background-position-y: -450px
+		background-position: -600px -450px
+		
+	.icon.health
+		background-position-x: -100px
+		background-position-y: -450px
+		background-position: -100px -450px
+		
+	.icon.hunger-homelessness
+		background-position-x: -200px
+		background-position-y: -450px
+		background-position: -200px -450px
+		
+	.icon.save-8-designate
+		background-position-x: -300px
+		background-position-y: -450px
+		background-position: -300px -450px
+		
+	.icon.youth-mentoring
+		background-position-x: -400px
+		background-position-y: -450px
+		background-position: -400px -450px
+			
+// Blog Page
+
+.page-blog
+		
+	.update
+		
+		h2
+			background: url(resources/sprite.png) no-repeat left
+			background-position-x: -760px
+			background-position-y: -658px
+			background-position: -760px -658px
+			min-height: 40px
+			padding-left: 50px
+			
+		h3
+			font-size: 1.4em
+			padding-left: 50px
+			
+		em
+			font-size: 0.7em
+			
+// Calendar Page
+
+.page-calendar
+		
+	.event
+		margin: 6em 0
+		@extend %clearfix
+			
+		.event-main
+			float: left
+			padding-right: 1em
+			width: 50%
+			
+		.details
+			float: right
+			padding: 1em 0 1em 1em
+			position: relative
+			top: 5px
+			width: 50%
+		
+		h2
+			display: block
+			min-height: 50px
+			
+		.details p
+			font-size: 1.4em
+			margin: 0
+			
+		em, .dates
+			font-weight: 700
+			
+// Contact
+
+.page-contact
+
+	.content-area
+		padding: 4em 1em
+	
+	section.general
+		float: left
+		font-family: $sansType
+		margin-bottom: 1.5em
+		padding-right: 2em
+		padding-top: 2em
+		width: 55%
+		@extend %clearfix
+		
+		h1
+			font-family: $serifType
+		
+		h2
+			background-image: url(resources/sprite.png)
+			background-repeat: no-repeat 
+			clear: left
+			display: inline-block
+			float: left
+			font-size: 1em
+			height: 32px
+			padding-left: 40px
+			margin-right: 4px
+			
+		div
+			font-size: 1.5em
+			display: block
+			line-height: 1
+			margin: 1em 0
+			min-height: 32px
+			
+		p
+			font-size: 1em
+			padding-left: 120px
+			
+		a
+			color: $accent
+		
+		.phone
+			background-position-x: -768px
+			background-position-y: -150px
+			background-position: -768px -150px
+		
+		.email
+			background-position-x: -768px
+			background-position-y: -214px
+			background-position: -768px -214px
+					
+		.location
+			background-position-x: -768px
+			background-position-y: -278px
+			background-position: -768px -278px
+		
+		.hours
+			background-position-x: -768px
+			background-position-y: -342px
+			background-position: -768px -342px
+		
+	aside
+		border-left: 1px solid $dark
+		float: right
+		margin-bottom: 1.5em
+		padding-left: 1em
+		padding-top: 2em
+		text-align: center
+		width: 45%
+		@extend %clearfix
+
+		h1
+			background-image: url(resources/sprite.png)
+			background-repeat: no-repeat
+			background-position-x: -768px
+			background-position-y: -396px
+			background-position: -768px -396px
+			padding-left: 40px
+			
+		div
+			display: block
+			text-align: center
+			
+		.button
+			color: #ffffff
+			float: left
+			font-size: 1.3em
+			line-height: 1
+			position: relative
+			top: 7px
+			z-index: 2
+			
+		p
+			font-size: 1.4em
+			line-height: 1
+			margin-bottom: 2em
+			padding-left: 150px
+			position: relative
+			text-align: left
+			top: 5px
+
+		.facebook, .twitter
+			background-image: url(resources/sprite.png)
+			background-repeat: no-repeat
+			display: inline-block
+			font-size: 2em
+			height: 32px
+			margin-top: 1em
+			padding-left: 40px
+			
+		.facebook
+			background-position-x: -768px
+			background-position-y: -470px
+			background-position: -768px -470px
+
+		.twitter
+			background-position-x: -768px
+			background-position-y: -534px
+			background-position: -768px -534px
+		
+	section.leadership
+		border-top: 1px solid $dark
+		clear: both
+		padding-top: 3em
+		
+		h1
+			background-image: url(resources/sprite.png)
+			background-position-x: -768px
+			background-position-y: -586px
+			background-position: -768px -586px
+			background-repeat: no-repeat 
+			//height: 32px
+			padding-left: 40px
+			vertical-align: top
+
+		h3
+			font-size: 1.5em
+		
+		p, a
+			font-size: 1.25em
+			
+		article
+			float: left
+			height: 11em
+			width: 33%
+
+			img
+				
+				float: left
+				margin: 0 1em 10em 0
+				
+				
+			&:nth-child(3n+2)
+				padding-right: 1em
+			&:nth-child(3n)
+				padding: 0 0.5em
+			&:nth-child(3n+1)
+				padding-left: 1em
+				
+.page-volunteer
+	
+	fieldset
+		border: 1px solid $dark
+		font-size: 1.33em
+		padding: 1em
+		margin: 1em 0
+		
+	fieldset.contact label
+		display: inline-block
+		min-width: 90px
+		text-align: right
+		
+	fieldset.meeting label.daylabel
+		display: inline-block
+		min-width: 90px
+		
+	fieldset.transport input
+		margin-left: 1em
+		
+	input[type="submit"], input[type="reset"]
+		border-style: none
+		margin-right: 1em
+		
+	table td.radio-label
+		width: 30px
+		
+.page-need-volunteers
+	
+	fieldset
+		border: 1px solid $dark
+		font-size: 1.33em
+		padding: 1em
+		margin: 1em 0
+		
+	label
+		display: inline-block
+		min-width: 170px
+		text-align: right
+		
+	textarea
+		min-height: 200px
+		width: 100%
+		min-width: 200px
+		vertical-align: top
+		
+	input[type="submit"], input[type="reset"]
+		border-style: none
+		margin-right: 1em
+
+
+
+
+// Mobile Styles
+
+@media screen and (max-width: 900px)
+	
+	nav li a
+		padding: 0.5em 2em
+		
+	.page-contact aside
+	
+		h1
+			background-position-x: -768px
+			background-position-y: -406px
+			background-position: -768px -406px
+			font-size: 2em
+			
+		// .button
+		// 	margin: 0 0.5em 1em 0.5em
+			
+		.facebook, .twitter
+			font-size: 1.5em
+
+@media screen and (max-width: 860px)
+			
+	.page-about
+		.interest
+			padding-left: 110px !important
+			width: 100%
+			.icon
+				left: 0 !important
+	
+		
+@media screen and (max-width: 780px)
+	
+	header
+		.info
+			width: 100%
+			text-align: center
+	
+		.logo
+			margin-left: auto
+			margin-right: auto
+	
+		p
+			margin-left: auto
+			margin-right: auto
+
+		.action
+			clear: both
+			float: left
+			text-align: center
+			width: 100%
+		
+		.icons
+			display: none
+		
+	.page-contact
+		
+		section.general
+			border: none
+			padding: 0
+			width: 100%
+
+		aside
+			border-left: none
+			border-top: 1px solid $dark
+			padding: 3em 0
+			text-align: left
+			width: 100%
+			
+			h1
+				background-position-x: -768px
+				background-position-y: -396px
+				background-position: -768px -396px
+				font-size: 3em
+			
+			div
+				width: 100%
+				
+			p
+				max-width: 100%
+				
+			.facebook, .twitter
+				margin: 0.5em
+				width: 200px
+				
+		section.leadership
+
+			article
+				width: 50%
+
+				img
+					float: none
+					margin: 0
+				
+				&:nth-child(2n)
+					padding: 0 1em 0 0
+				&:nth-child(2n+1)
+					padding: 0 0 0 1em
+		
+@media screen and (max-width: 760px)
+	
+	nav li a
+		font-size: 1em
+		
+	.page-home
+		section.updates, section.events
+			padding: 0
+			margin: 3em 0
+			width: 100%
+			
+	.page-calendar
+		.event .event-main, .event .details
+			float: none
+			padding-left: 0
+			padding-right: 0
+			width: 100%
+		
+@media screen and (max-width: 620px)
+	
+	nav li a
+		padding: 0.5em 1.5em
+		
+@media screen and (max-width: 540px)
+
+	.page-contact section.leadership article
+		text-align: center
+		width: 100%
+		
+		&:nth-child(n)
+			padding: 0
+		
+@media screen and (max-width: 500px)
+		
+	.page-about
+		.interest
+			padding: 0 !important
+		.interest .icon
+			margin: auto
+			position: relative
+		.interest h2
+			text-align: center
+			
+	.page-contact
+		aside h1
+			background-position-x: -768px
+			background-position-y: -406px
+			background-position: -768px -406px
+			font-size: 2em
+	
+	footer p
+		font-size: 0.75em
+		
+@media screen and (max-width: 450px)
+
+	header
+		.info
+			width: 100%
+
+		.logo
+			background-position-y: 173/800 * 100%
+			background-position: 0 173/800 * 100%
+			background-size: 800 / 430 * 100%
+			height: 0px
+			padding-top: 23.0232558%
+			width: 100%
+		
+		p
+			font-size: 1.6em
+			width: 100%
+		
+		.button
+			margin-bottom: 1em

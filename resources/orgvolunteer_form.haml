@@ -1,0 +1,38 @@
+%html
+	%head
+		%link(rel="stylesheet" href="form2.css")
+	%body
+		%form
+			%h1 Organization Volunteer Form
+			%fieldset	
+				%legend Event Information:
+				%label Name of Organization:
+				%input(type='text' name='nameoforg') <br />
+				%label Title of Event:
+				%input(type='text' name='eventitle') <br />
+				%label Date of Event:
+				%input(type='text' name='date') <br />
+				%label Event Location:
+				%input(type='text' name='eventitle') <br />
+				%label Event Description:
+				%textarea.description(name='eventdescription')
+				<br />
+			%fieldset
+				%legend Contact information:
+				%label Agency Contact/Volunteer Coordinator:
+				%input(type='text' name='eventitle') <br />
+				%label Phone:
+				%input(type='text' name='phone') <br />
+				%label Fax:
+				%input(type='text' name='fax') <br />
+				%label Website:
+				%input(type='text' name='website') <br />
+				%label E-mail:
+				%input(type='text' name='email') <br />
+				%label Additional Information:
+				%textarea.description(name='information')
+				<br />
+				%label Upload a Flyer (optional):
+				%input.button(type='button' value='Upload') <br />
+			%input.button(type='submit' value='Submit')
+			%input.button(type='reset' value='Reset') 

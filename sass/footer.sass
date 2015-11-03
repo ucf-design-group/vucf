@@ -1,6 +1,6 @@
 // Information about the logo file
 
-$source: url(resources/logos.png)
+$source: url(resources/sprite.png)
 
 $osi_width: 160px
 $ucf_width: 360px
@@ -18,19 +18,25 @@ $sga_offset: ($osi_width + $ucf_width) / ($total_width - $sga_width) * 100%
 $dg_offset: 100%
 
 footer
+	padding: 2em 0
+	
+	p
+		//margin: 2em 0
+
 	.logos
 		font-size: 0
 		height: 150px
 		text-align: center
 		margin: auto
-		width: 100%
+		width: $total_width
 
 	.osi, .ucf, .sga, .dg
 		background:
 			image: $source
 			repeat: no-repeat
-		display: inline-block
+		float: left
 		height: $height
+		margin: 0
 		text-indent: -10000px
 
 	.osi
@@ -51,6 +57,10 @@ footer
 
 @media screen and (max-width: $total_width)
 	footer
+		.logos
+			height: auto
+			width: 100%
+			
 		.osi, .ucf, .sga, .dg
 			padding-top: $height / $total_width * 100%
 			line-height: 0
