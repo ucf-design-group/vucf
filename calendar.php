@@ -66,7 +66,7 @@ if (isset($_POST['calendar-form-submit']) && $_POST['calendar-form-submit'] === 
 				</aside>
 
 				<section class="events">
-					<h1>Upcoming Events</h1>
+					<h1>upcoming events</h1>
 
 					<form action="<?php echo site_url('/calendar/'); ?>" method="post">
 						<p><label for="calendar-form-cat">Choose a Social Interest to narrow the list of events:</label></p>
@@ -170,5 +170,14 @@ if (isset($_POST['calendar-form-submit']) && $_POST['calendar-form-submit'] === 
 
 				<p class="disclaimer">Volunteer UCF will often meet at the UCF Orlando Campus Lake Claire Pavilion before departing to the location where the service event will happen.  At this meeting point participants can choose to offer a ride to other participants or can choose to accept such offers of a ride.  VUCF does not prescreen drivers, and we do not vouch for their vehicles or driving abilities.  Transportation to and from the event is arranged on your own and at your own risk.  VUCF takes no responsibility with regard to the travel arrangements of participants.</p>
 			</div>
-
+<style type="text/css">
+@font-face {
+ font-family: kgsecondchances;
+ src: url("<?php echo get_stylesheet_directory_uri(); ?>/resources/KGSecondChancesSketch.eot") /* EOT file for IE */
+}
+@font-face {
+ font-family: kgsecondchances;
+ src: url("<?php echo get_stylesheet_directory_uri(); ?>/resources/KGSecondChancesSketch.ttf") /* TTF file for CSS3 browsers */
+}
+</style>
 <?php get_footer(); ?>

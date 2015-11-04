@@ -12,7 +12,7 @@
 				</div>
 
 				<section class="general">
-					<h1>Contact VUCF</h1>
+					<h1 style="font-family:kgsecondchances">contact VUCF</h1>
 					<div><h2 class="phone">Phone: </h2><p><a href="tel:407-823-3318">(407) 823-3318</a></p></div>
 					<div><h2 class="email">E-Mail: </h2><p><a href="mailto:vucf@ucf.edu">vucf@ucf.edu</a></p></div>
 					<div><h2 class="location">Location: </h2><p>VUCF is located on the second floor of the Student Union inside the Office of Student Involvement, Room 208.</p></div>
@@ -20,7 +20,7 @@
 				</section>
 
 				<aside>
-					<h1>Connect With VUCF</h1>
+					<h1>connect with VUCF</h1>
 						<div>
 							<a class="button" href="<?php echo site_url('/volunteer/'); ?>">Want More Information?</a>
 							<p>Schedule a consultation with a VUCF Board member to learn more about service opportunities that are related to your specific interests or needs.</p>
@@ -36,7 +36,7 @@
 				</aside>
 				
 				<section class="leadership">
-					<h1>Board of Directors</h1>
+					<h1>board of directors</h1>
 <?php 				
 					$leaderLoop = new WP_QUERY(array('post_type' => 'leadership', 'posts_per_page' => -1, 'orderby' => 'meta_value', 'order' => 'ASC', 'meta_key' => 'leader-form-order'));
 					while ($leaderLoop->have_posts()) {
@@ -60,5 +60,14 @@
 ?>
 				</section>
 			</div>
-
+<style type="text/css">
+@font-face {
+ font-family: kgsecondchances;
+ src: url("<?php echo get_stylesheet_directory_uri(); ?>/resources/KGSecondChancesSketch.eot") /* EOT file for IE */
+}
+@font-face {
+ font-family: kgsecondchances;
+ src: url("<?php echo get_stylesheet_directory_uri(); ?>/resources/KGSecondChancesSketch.ttf") /* TTF file for CSS3 browsers */
+}
+</style>
 <?php get_footer(); ?>

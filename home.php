@@ -21,9 +21,9 @@
 				</section>
 				
 				<section class="updates">
-					<h1 style="font-family: kgsecondchances;">updates</h1>
+					<h1>updates</h1>
 <?php 					
-					$updateLoop = new WP_QUERY(array('post_type' => 'updates', 'posts_per_page' => 3, 'orderby' => 'date', 'order' => 'DESC', 'meta_key' => 'updates-form-expiration', 'meta_value' => time(), 'meta_compare' => '>='));
+					$updateLoop = new WP_QUERY(array('post_type' => 'updates', 'posts_per_page' => 2, 'orderby' => 'date', 'order' => 'DESC', 'meta_key' => 'updates-form-expiration', 'meta_value' => time(), 'meta_compare' => '>='));
 					while ($updateLoop->have_posts()) {
 						$updateLoop->the_post();
 						$title = get_the_title();
@@ -41,9 +41,9 @@
 				</section>
 
 				<section class="events">
-					<h1 style="font-family: kgsecondchances;">upcoming events</h1>
+					<h1>upcoming events</h1>
 <?php 					
-					$eventLoop = new WP_QUERY(array('post_type' => 'osi-events', 'posts_per_page' => 3, 'orderby' => 'meta_value', 'order' => 'ASC', 'meta_key' => 'oe-form-start', 'meta_value' => time(), 'meta_compare' => '>='));
+					$eventLoop = new WP_QUERY(array('post_type' => 'osi-events', 'posts_per_page' => 2, 'orderby' => 'meta_value', 'order' => 'ASC', 'meta_key' => 'oe-form-start', 'meta_value' => time(), 'meta_compare' => '>='));
 					while ($eventLoop->have_posts()) {
 						$eventLoop->the_post();
 						$title = get_the_title();

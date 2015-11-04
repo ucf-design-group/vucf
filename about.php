@@ -11,7 +11,7 @@
 					} ?>
 				</div>
 				<section class="interests">
-					<h1>Areas of Interest</h1>
+					<h1>areas of interest</h1>
 <?php 					
 					$interestLoop = new WP_QUERY(array('post_type' => 'interests', 'posts_per_page' => -1, 'orderby' => 'name', 'order' => 'ASC'));
 					while ($interestLoop->have_posts()) {
@@ -36,5 +36,15 @@
 ?>
 				</section>
 			</div>
+<style type="text/css">
+@font-face {
+ font-family: kgsecondchances;
+ src: url("<?php echo get_stylesheet_directory_uri(); ?>/resources/KGSecondChancesSketch.eot") /* EOT file for IE */
+}
+@font-face {
+ font-family: kgsecondchances;
+ src: url("<?php echo get_stylesheet_directory_uri(); ?>/resources/KGSecondChancesSketch.ttf") /* TTF file for CSS3 browsers */
+}
+</style>
 
 <?php get_footer(); ?>
