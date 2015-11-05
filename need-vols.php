@@ -63,5 +63,23 @@ get_header(); ?>
 					</form>
 				</section>
 			</div>
-
+<style type="text/css">
+@font-face {
+ font-family: kgsecondchances;
+ src: url("<?php echo get_stylesheet_directory_uri(); ?>/resources/KGSecondChancesSketch.eot") /* EOT file for IE */
+}
+@font-face {
+ font-family: kgsecondchances;
+ src: url("<?php echo get_stylesheet_directory_uri(); ?>/resources/KGSecondChancesSketch.ttf") /* TTF file for CSS3 browsers */
+}
+@font-face {
+ font-family: malam;
+ src: url("<?php echo get_stylesheet_directory_uri(); ?>/resources/malam.eot") /* EOT file for IE */
+}
+@font-face {
+ font-family: malam;
+ src: url("<?php echo get_stylesheet_directory_uri(); ?>/resources/malam.ttf") /* TTF file for CSS3 browsers */
+}
+</style>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <?php get_footer(); ?>

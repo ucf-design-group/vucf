@@ -12,7 +12,7 @@
 
 // Base variables
 $serifType: "Calluna", serif
-$sansType: "calluna-sans", sans-serif
+$sansType: "Open Sans", sans-serif
 $maxWidth: 1000px
 
 $main: #515151
@@ -85,7 +85,6 @@ a:focus
 
 header
 	background-image: url("resources/chalkboard.jpg")
-	background-image: url("resources/glow.png"), url("resources/chalkboard.jpg")
 	background-repeat: no-repeat
 	background-position: center
 	background-position: center center, center center
@@ -115,7 +114,7 @@ header
 		width: 420px
 	
 	section
-		max-width: 1000px
+		max-width: 1400px
 		margin: auto
 		padding: 2em 1em
 		position: relative
@@ -130,7 +129,6 @@ header
 	
 	.action
 		float: right
-		padding-top: 4em
 		text-align: right
 	
 	.button
@@ -202,27 +200,36 @@ nav
 
 .content-area
 	font-size: 1.2em
-	padding: 6em 1em
+	padding: 3em 1em
 	margin: auto
-	max-width: 1000px
+	max-width: 1300px
 	@extend %clearfix
 	
 	.main-text
 		margin: 0
 	
 	h1
-		font-size: 3em
-		font-weight: 600
-		//margin-bottom: 5em
+		font-size: 45px
+		font-weight: 100
+		margin-bottom: .5em
 		font-family: kgsecondchances
+		color: #6095CA
 		
 	h2
 		font-size: 2em
-		font-weight: 600
+		font-weight: 100
+		font-family: kgsecondchances
+		color: #F3A028
+
+	h3
+		font-size: 1.5em
+		font-weight: 100
+		font-family: $sansType
+		color: #6095CA
 		
 	h4
 		font-family: $sansType
-		font-size: 2em
+		font-size: 1.7em
 		margin-bottom: 2em
 		
 	article
@@ -230,7 +237,7 @@ nav
 			
 	p
 		font-family: $sansType
-		font-size: 1.6em
+		font-size: 1.5em
 		margin: 1em 0
 		
 	p#alert
@@ -252,7 +259,7 @@ nav
 			top: 5px
 			
 	a
-		color: $dark
+		color: #6095CA
 		text-decoration: none
 		
 		-webkit-transition: color 0.3s 
@@ -291,10 +298,10 @@ footer
 		width: 50%
 		
 	section.updates
-		padding-right: 3em
+		padding-right: 4em
 		
 	section.events
-		padding-left: 3em
+		padding-left: 4em
 		
 	.update, .event
 		margin: 6em 0
@@ -505,7 +512,7 @@ $num_interests: 12
 		@extend %clearfix
 		
 		h1
-			font-family: $serifType
+			font-family: $sansType
 		
 		h2
 			background-image: url(resources/sprite.png)
@@ -531,29 +538,33 @@ $num_interests: 12
 			
 		a
 			color: $accent
+			font-family: $sansType
 		
 		.phone
 			background-position-x: -768px
 			background-position-y: -150px
 			background-position: -768px -150px
+			font-family: $sansType
 		
 		.email
 			background-position-x: -768px
 			background-position-y: -214px
 			background-position: -768px -214px
+			font-family: $sansType
 					
 		.location
 			background-position-x: -768px
 			background-position-y: -278px
 			background-position: -768px -278px
+			font-family: $sansType
 		
 		.hours
 			background-position-x: -768px
 			background-position-y: -342px
 			background-position: -768px -342px
+			font-family: $sansType
 		
 	aside
-		border-left: 1px solid $dark
 		float: right
 		margin-bottom: 1.5em
 		padding-left: 1em
@@ -631,6 +642,7 @@ $num_interests: 12
 		
 		p, a
 			font-size: 1.25em
+			font-family: $sansType
 			
 		article
 			float: left
@@ -654,6 +666,7 @@ $num_interests: 12
 	
 	fieldset
 		border: 1px solid $dark
+		font-family: $sansType
 		font-size: 1.33em
 		padding: 1em
 		margin: 1em 0
@@ -684,7 +697,8 @@ $num_interests: 12
 		font-size: 1.33em
 		padding: 1em
 		margin: 1em 0
-		
+		font-family: $sansType
+
 	label
 		display: inline-block
 		min-width: 170px

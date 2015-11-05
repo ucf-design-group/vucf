@@ -14,9 +14,9 @@
 
 				<section class="otherPrograms">
 					<h1 style="font-family: kgsecondchances;">our other programs</h1>
-					<div style="text-align:center;margin-bottom:40px;">
-						<a href="http://osi.ucf.edu/knightsgiveback"><img style="margin-right:60px;"src="<?php echo get_stylesheet_directory_uri(); ?>/resources/KGB.png"></img></a>
-						<a href="http://osi.ucf.edu/abp/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/ABP.png"></img></a>
+					<div style="margin-left:90px;margin-bottom:40px;">
+						<a href="http://osi.ucf.edu/knightsgiveback"><img style="width:350px;position:relative;bottom:30px;margin-right:430px;"src="<?php echo get_stylesheet_directory_uri(); ?>/resources/KGB.png"></img></a>
+						<a href="http://osi.ucf.edu/abp/"><img style="width:200px;"src="<?php echo get_stylesheet_directory_uri(); ?>/resources/ABP.png"></img></a>
 					</div>
 				</section>
 				
@@ -54,7 +54,7 @@
 						<h2>
 							<div class="date">
 								<div class="month"><?php echo date('M', $date); ?></div>
-								<div class="day"><?php echo date('d', $date); ?></div>
+								<div style="font-family:kgsecondchances; color:black;" class="day"><?php echo date('d', $date); ?></div>
 							</div>
 							<?php echo $title; ?>
 						</h2>
@@ -77,5 +77,14 @@
  font-family: kgsecondchances;
  src: url("<?php echo get_stylesheet_directory_uri(); ?>/resources/KGSecondChancesSketch.ttf") /* TTF file for CSS3 browsers */
 }
+@font-face {
+ font-family: malam;
+ src: url("<?php echo get_stylesheet_directory_uri(); ?>/resources/malam.eot") /* EOT file for IE */
+}
+@font-face {
+ font-family: malam;
+ src: url("<?php echo get_stylesheet_directory_uri(); ?>/resources/malam.ttf") /* TTF file for CSS3 browsers */
+}
 </style>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <?php get_footer(); ?>

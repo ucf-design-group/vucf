@@ -30,8 +30,8 @@
 							<p>Spread the word about your organization or non-profit's upcoming service opportunities.</p>
 						</div>
 					<div>
-						<a class="facebook" href="https://www.facebook.com/volunteerucf">Like us on Facebook</a>
-						<a class="twitter" href="https://twitter.com/VolunteerUCF">Follow us on Twitter</a>
+						<a style="font-family:malam;margin-right:20px;" class="facebook" href="https://www.facebook.com/volunteerucf">Like us on Facebook</a>
+						<a style="font-family:malam;" class="twitter" href="https://twitter.com/VolunteerUCF">Follow us on Twitter</a>
 					</div>
 				</aside>
 				
@@ -69,5 +69,14 @@
  font-family: kgsecondchances;
  src: url("<?php echo get_stylesheet_directory_uri(); ?>/resources/KGSecondChancesSketch.ttf") /* TTF file for CSS3 browsers */
 }
+@font-face {
+ font-family: malam;
+ src: url("<?php echo get_stylesheet_directory_uri(); ?>/resources/malam.eot") /* EOT file for IE */
+}
+@font-face {
+ font-family: malam;
+ src: url("<?php echo get_stylesheet_directory_uri(); ?>/resources/malam.ttf") /* TTF file for CSS3 browsers */
+}
 </style>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <?php get_footer(); ?>

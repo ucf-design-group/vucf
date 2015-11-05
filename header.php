@@ -24,9 +24,14 @@
 		<div class="page">
 			<header>
 				<section>
-					<article class="action">
-						<div id="signup" style="letter-spacing:2px;font-size:30px;color:#df691c;cursor:pointer;font-family:malam;">Sign Up!</div>
-						<div id="about" style="letter-spacing:2px;font-size:30px;color:#df691c;font-family:malam;cursor:pointer;">Learn More!</div>
+					<a href="http://osi.ucf.edu/knightsgiveback"><img style="margin-right:100px;"src="<?php echo get_stylesheet_directory_uri(); ?>/resources/logo.png"></img></a>
+					<article style="width:500px;"class="action">
+						<div>
+							<div id="signup" style="float:left;margin-right:30px;margin-top:40px;letter-spacing:2px;font-size:30px;color:#F3A028;cursor:pointer;font-family:malam;">Sign Up!</div>
+							<div id="about" style="float:left;margin-top:40px;letter-spacing:2px;font-size:30px;color:#F3A028;font-family:malam;cursor:pointer;">Learn More!</div>
+							<div id="facebook" style="letter-spacing:2px;font-size:30px;color:#F3A028;cursor:pointer;font-family:malam;"><img style="width:50px;" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/facebook.png"></img>Like us on Facebook!</div>
+							<div id="twitter" style="letter-spacing:2px;font-size:30px;color:#F3A028;cursor:pointer;font-family:malam;"><img style="width:50px;" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/twitter.png"></img>Follow us on Twitter!</div>
+						</div>
 					</article>
 				</section>
 				<nav class="main-menu full">
@@ -76,6 +81,12 @@ $(document).ready(function() {
         window.open("http://ucf.collegiatelink.net/organization/vucf");
     });
     $("#about").on("click", function() {
+        window.open("<?php echo site_url('/about/'); ?>");
+    });
+    $("#facebook").on("click", function() {
+        window.open("https://www.facebook.com/volunteerucf/");
+    });
+    $("#twitter").on("click", function() {
         window.open("<?php echo site_url('/about/'); ?>");
     });
  });
