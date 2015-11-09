@@ -22,6 +22,7 @@
 ?>
 	<body <?php echo $body_class; ?>>
 		<div class="page">
+			<nav class="main-menu full">
 			<header>
 				<section>
 					<a href="http://osi.ucf.edu/knightsgiveback"><img style="margin-right:100px;"src="<?php echo get_stylesheet_directory_uri(); ?>/resources/logo.png"></img></a>
@@ -34,7 +35,6 @@
 						</div>
 					</article>
 				</section>
-				<nav class="main-menu full">
 					<div class="screen-reader-text skip-link"><a href="#UPDATE ME" title="Skip to content">Skip to content</a></div>
 					<div class="compact-menu">
 						<a class="menu-toggle" href="#">Tap for Menu</a>

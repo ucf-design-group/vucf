@@ -1,6 +1,6 @@
 // Information about the logo file
 
-$source: url(resources/sprite.png)
+$source: url(resources/logos.png)
 
 $osi_width: 160px
 $ucf_width: 360px
@@ -17,12 +17,19 @@ $ucf_offset: ($osi_width) / ($total_width - $ucf_width) * 100%
 $sga_offset: ($osi_width + $ucf_width) / ($total_width - $sga_width) * 100%
 $dg_offset: 100%
 
+$transparent: rgba(0, 0, 0, 0.75)
+$fallback: rgb(49, 49, 49)
+
 footer
 	padding: 2em 0
+	text-align: center
+	width: 100%
+	background: $fallback
+	background: $transparent
 	
 	p
-		//margin: 2em 0
-
+		margin-top: 2em
+	
 	.logos
 		font-size: 0
 		height: 150px
@@ -35,6 +42,7 @@ footer
 			image: $source
 			repeat: no-repeat
 		float: left
+		display: inline-block
 		height: $height
 		margin: 0
 		text-indent: -10000px

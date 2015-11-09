@@ -59,7 +59,7 @@ a:focus
 // Button Styles
 
 .button
-	background: #df691c
+	background: #F3A028
 	border-radius: 3px
 	box-shadow: 2px 3px 1px #a75312
 	color: #ffffff
@@ -170,7 +170,6 @@ nav
 	font-size: 1.6em
 	
 	ul
-		background: $main
 		margin: auto
 		text-align: center
 	li
@@ -178,7 +177,9 @@ nav
 		margin: 0
 		
 	.current
-		background: $dark 
+		a
+			color: #F3A028
+
 	a
 		color: #ffffff
 		font-size: 1.25em
@@ -194,7 +195,8 @@ nav
 		transition: background 0.3s 
 		
 		&:hover
-			background: $dark 
+			color: $dark 
+
 			
 // Main Page Content
 
@@ -275,7 +277,8 @@ nav
 // Footer Styles (aside from footer.sass)
 
 footer
-	background: $main
+	background-image: url("resources/chalkboard.jpg")
+	background-size: cover
 	color: #ffffff
 	font-family: $sansType
 	font-size: 1.6em
