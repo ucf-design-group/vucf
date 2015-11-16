@@ -25,13 +25,13 @@
 			<nav class="main-menu full">
 			<header>
 				<section>
-					<a href="http://osi.ucf.edu/knightsgiveback"><img style="margin-right:100px;"src="<?php echo get_stylesheet_directory_uri(); ?>/resources/logo.png"></img></a>
+					<a href="http://osi.ucf.edu/vucf"><img style="margin-right:100px;"src="<?php echo get_stylesheet_directory_uri(); ?>/resources/logo.png"></img></a>
 					<article style="width:500px;"class="action">
 						<div>
-							<div id="signup" style="float:left;margin-right:30px;margin-top:40px;letter-spacing:2px;font-size:30px;color:#F3A028;cursor:pointer;font-family:malam;">Sign Up!</div>
-							<div id="about" style="float:left;margin-top:40px;letter-spacing:2px;font-size:30px;color:#F3A028;font-family:malam;cursor:pointer;">Learn More!</div>
-							<div id="facebook" style="letter-spacing:2px;font-size:30px;color:#F3A028;cursor:pointer;font-family:malam;"><img style="width:50px;" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/facebook.png"></img>Like us on Facebook!</div>
-							<div id="twitter" style="letter-spacing:2px;font-size:30px;color:#F3A028;cursor:pointer;font-family:malam;"><img style="width:50px;" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/twitter.png"></img>Follow us on Twitter!</div>
+							<div id="signup" class="signup">Sign Up!</div>
+							<div id="about" class="about">Learn More!</div>
+							<div id="facebook" class="facebook"><img style="width:50px;" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/facebook.png"></img>Like us on Facebook!</div>
+							<div id="twitter" class="twitter"><img style="width:50px;" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/twitter.png"></img>Follow us on Twitter!</div>
 						</div>
 					</article>
 				</section>

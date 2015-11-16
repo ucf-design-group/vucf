@@ -23,7 +23,7 @@
 				<section class="updates">
 					<h1>updates</h1>
 <?php 					
-					$updateLoop = new WP_QUERY(array('post_type' => 'updates', 'posts_per_page' => 2, 'orderby' => 'date', 'order' => 'DESC', 'meta_key' => 'updates-form-expiration', 'meta_value' => time(), 'meta_compare' => '>='));
+					$updateLoop = new WP_QUERY(array('post_type' => 'updates', 'posts_per_page' => 3, 'orderby' => 'date', 'order' => 'DESC', 'meta_key' => 'updates-form-expiration', 'meta_value' => time(), 'meta_compare' => '>='));
 					while ($updateLoop->have_posts()) {
 						$updateLoop->the_post();
 						$title = get_the_title();
@@ -54,7 +54,7 @@
 						<h2>
 							<div class="date">
 								<div class="month"><?php echo date('M', $date); ?></div>
-								<div style="font-family:kgsecondchances; color:black;" class="day"><?php echo date('d', $date); ?></div>
+								<div style="font-family:kgsecondchances;" class="day"><?php echo date('d', $date); ?></div>
 							</div>
 							<?php echo $title; ?>
 						</h2>

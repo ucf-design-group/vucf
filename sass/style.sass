@@ -18,7 +18,9 @@ $maxWidth: 1000px
 $main: #515151
 $dark: #363636
 $accent: #df691c
-$base: #eeeeee
+$base: #E5E5E5
+$primary: #6095CA
+$secondary: #F5AC41
 
 // Base layout/type
 
@@ -33,7 +35,7 @@ body
 	min-height: 100%
 .page
 	background: $base
-	
+
 // Clearfix
 
 %clearfix
@@ -59,7 +61,7 @@ a:focus
 // Button Styles
 
 .button
-	background: #F3A028
+	background: $secondary
 	border-radius: 3px
 	box-shadow: 2px 3px 1px #a75312
 	color: #ffffff
@@ -123,7 +125,7 @@ header
 	article
 		float: left
 		height: 100%
-	
+
 	.info
 		width: 430px
 	
@@ -133,6 +135,47 @@ header
 	
 	.button
 		margin: 0 0.5em
+
+	.signup
+		float: left
+		margin-right: 30px
+		margin-top: 40px
+		letter-spacing: 2px
+		font-size: 30px
+		color: $secondary
+		cursor: pointer
+		font-family: malam
+		&:hover
+			color: $primary 
+
+	.about
+		float: left
+		margin-top: 40px
+		letter-spacing: 2px
+		font-size: 30px
+		color: $secondary
+		font-family: malam
+		cursor: pointer
+		&:hover
+			color: $primary 
+
+	.facebook
+		letter-spacing: 2px
+		font-size: 30px
+		color: $secondary
+		cursor: pointer
+		font-family: malam
+		&:hover
+			color: $primary 
+
+	.twitter
+		letter-spacing: 2px
+		font-size: 30px
+		color: $secondary
+		cursor: pointer
+		font-family: malam
+		&:hover
+			color: $primary 
 		
 // Links to ABP and KGB
 
@@ -178,7 +221,7 @@ nav
 		
 	.current
 		a
-			color: #F3A028
+			color: $secondary
 
 	a
 		color: #ffffff
@@ -195,7 +238,7 @@ nav
 		transition: background 0.3s 
 		
 		&:hover
-			color: $dark 
+			color: $primary 
 
 			
 // Main Page Content
@@ -215,19 +258,19 @@ nav
 		font-weight: 100
 		margin-bottom: .5em
 		font-family: kgsecondchances
-		color: #6095CA
+		color: $primary
 		
 	h2
 		font-size: 2em
 		font-weight: 100
 		font-family: kgsecondchances
-		color: #F3A028
+		color: $secondary
 
 	h3
 		font-size: 1.5em
 		font-weight: 100
 		font-family: $sansType
-		color: #6095CA
+		color: $primary
 		
 	h4
 		font-family: $sansType
@@ -259,9 +302,10 @@ nav
 			position: absolute
 			left: 0
 			top: 5px
+			color: $secondary
 			
 	a
-		color: #6095CA
+		color: $primary
 		text-decoration: none
 		
 		-webkit-transition: color 0.3s 
@@ -717,6 +761,118 @@ $num_interests: 12
 		border-style: none
 		margin-right: 1em
 
+
+// Community Builders
+
+.page-community-builders-program
+
+	.content-area
+		padding: 4em 1em
+	
+	section.general
+		float: left
+		font-family: $sansType
+		margin-bottom: 1.5em
+		padding-right: 2em
+		padding-top: 2em
+		width: 50%
+		@extend %clearfix
+		
+		h2
+			background-image: url(resources/sprite.png)
+			background-repeat: no-repeat 
+			clear: left
+			display: inline-block
+			float: left
+			font-size: 1em
+			height: 32px
+			padding-left: 40px
+			margin-right: 4px
+			
+		div
+			font-size: 1.5em
+			display: block
+			line-height: 1
+			margin: 1em 0
+			min-height: 32px
+			
+		p
+			padding-left: 20px
+			
+		a
+			color: $accent
+			font-family: $sansType
+		
+	aside
+		float: right
+		margin-bottom: 1.5em
+		padding-left: 1em
+		padding-top: 2em
+		width: 50%
+		@extend %clearfix
+			
+		div
+			display: block
+			text-align: center
+			
+		.button
+			color: #ffffff
+			float: left
+			font-size: 1.3em
+			line-height: 1
+			position: relative
+			top: 7px
+			z-index: 2
+			
+		p
+			font-size: 1.4em
+			line-height: 1
+			margin-bottom: 2em
+			padding-left: 150px
+			position: relative
+			text-align: left
+			top: 5px
+		
+	section.leadership
+		border-top: 1px solid $dark
+		clear: both
+		padding-top: 3em
+		
+		h1
+			background-image: url(resources/sprite.png)
+			background-position-x: -768px
+			background-position-y: -586px
+			background-position: -768px -586px
+			background-repeat: no-repeat 
+			//height: 32px
+			padding-left: 40px
+			vertical-align: top
+
+		h3
+			font-size: 1.5em
+		
+		p, a
+			font-size: 1.25em
+			font-family: $sansType
+			
+		article
+			float: left
+			height: 11em
+			width: 33%
+
+			img
+				
+				float: left
+				margin: 0 1em 10em 0
+				
+				
+			&:nth-child(3n+2)
+				padding-right: 1em
+			&:nth-child(3n)
+				padding: 0 0.5em
+			&:nth-child(3n+1)
+				padding-left: 1em
+				
 
 
 
