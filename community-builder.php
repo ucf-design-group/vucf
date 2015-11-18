@@ -16,6 +16,27 @@
 				</section>
 				<aside>
 					<h1>community connectors</h1>
+<?php
+							$leaderLoop = new WP_QUERY(array('post_type' => 'comcon', 'posts_per_page' => -1, 'orderby' =>'meta_value', 'order' => 'ASC'));
+
+							while ($leaderLoop->have_posts()) {
+								$leaderLoop->the_post();
+								$title = get_the_title();
+								$content = get_the_content();
+								$image = get_the_post_thumbnail($post->ID, 'medium');
+								$major = get_post_meta($post->ID, 'comcon-form-major', true);
+								$position = get_post_meta($post->ID, 'comcon-form-position', true);
+								$email = get_post_meta($post->ID, 'comcon-form-email', true);
+?>	
+									<h3><?php echo $title;?></h3>
+									<?php echo $image; ?>
+									<p style="font-size:16px;"><?php echo $position; ?></p>
+									<p ><?php echo $major; ?></p>
+									<p style="font-size:14px;"><?php echo $content; ?></p>
+
+
+<?php 				}
+?>
 				</aside>
 			</div>
 <style type="text/css">

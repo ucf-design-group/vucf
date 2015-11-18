@@ -91,6 +91,17 @@ function custom_post_types() {
 		'taxonomies' => array(),
 		'has_archive' => false,
 		));
+
+	register_post_type('comcon', array(
+		'labels' => array(
+			'name' => 'Community Connectors',
+			'singular_name' => 'Community Connector'),
+		'public' => true,
+		'hierarchical' => false,
+		'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
+		'taxonomies' => array(),
+		'has_archive' => false,
+		));
 }
 add_action('init', 'custom_post_types');
 
@@ -124,5 +135,6 @@ add_action('admin_head', 'cpt_icons');
 include_once("functions/functions-leadership.php");
 include_once("functions/functions-nav.php");
 include_once("functions/functions-updates.php");
+include_once("functions/functions-comcon.php");
 
 ?>
