@@ -102,6 +102,17 @@ function custom_post_types() {
 		'taxonomies' => array(),
 		'has_archive' => false,
 		));
+
+	register_post_type('featured', array(
+		'labels' => array(
+			'name' => 'Featured',
+			'singular_name' => 'Feature'),
+		'public' => true,
+		'hierarchical' => false,
+		'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
+		'taxonomies' => array(),
+		'has_archive' => false,
+		));
 }
 add_action('init', 'custom_post_types');
 
@@ -136,5 +147,6 @@ include_once("functions/functions-leadership.php");
 include_once("functions/functions-nav.php");
 include_once("functions/functions-updates.php");
 include_once("functions/functions-comcon.php");
+include_once("functions/functions-features.php");
 
 ?>

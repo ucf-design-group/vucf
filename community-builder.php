@@ -27,7 +27,6 @@
 								$major = get_post_meta($post->ID, 'comcon-form-major', true);
 								$position = get_post_meta($post->ID, 'comcon-form-position', true);
 								$email = get_post_meta($post->ID, 'comcon-form-email', true);
-
 ?>	
 									<div>
 										<?php echo $image; ?>

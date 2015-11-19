@@ -26,6 +26,26 @@
 			<header>
 				<section>
 					<a href="http://osi.ucf.edu/vucf"><img style="margin-right:100px;"src="<?php echo get_stylesheet_directory_uri(); ?>/resources/logo.png"></img></a>
+					<div id = "slider" style="background-color:blue;width:250px;height:250px;"></div>
+<?php
+					if(is_page('Home')){
+							$featuresLoop = new WP_QUERY(array('post_type' => 'featured', 'posts_per_page' => -1, 'orderby' =>'meta_value', 'order' => 'ASC'));
+							$i = 1;
+							while ($featuresLoop->have_posts()) {
+								$featuresLoop->the_post();
+								$title = get_the_title();
+								$content = get_the_content();
+								$image = get_the_post_thumbnail($post->ID, 'medium');
+								echo "
+            					<script type=\"text/javascript\">
+            					var e = document.getElementById('slider'); 
+            					e.innerHTML='<?php echo $image; ?>';
+            					</script>
+        						";
+							}
+
+						}
+?>
 					<article style="width:500px;"class="action">
 						<div>
 							<div id="signup" class="signup">Sign Up!</div>
@@ -89,6 +109,7 @@ $(document).ready(function() {
     $("#twitter").on("click", function() {
         window.open("<?php echo site_url('/about/'); ?>");
     });
+
  });
 </script>
 			</header>
