@@ -26,7 +26,7 @@
 			<header>
 				<section>
 					<a href="http://osi.ucf.edu/vucf"><img style="margin-right:100px;"src="<?php echo get_stylesheet_directory_uri(); ?>/resources/logo.png"></img></a>
-					<div id = "slider" style="background-color:blue;width:250px;height:250px;"></div>
+					<div id = "slider" style="width:250px;height:250px;">
 <?php
 					if(is_page('Home')){
 							$featuresLoop = new WP_QUERY(array('post_type' => 'featured', 'posts_per_page' => -1, 'orderby' =>'meta_value', 'order' => 'ASC'));
@@ -36,16 +36,19 @@
 								$title = get_the_title();
 								$content = get_the_content();
 								$image = get_the_post_thumbnail($post->ID, 'medium');
-								echo "
-            					<script type=\"text/javascript\">
-            					var e = document.getElementById('slider'); 
-            					e.innerHTML='<?php echo $image; ?>';
-            					</script>
-        						";
+?>
+								<div id = 'image<?php echo $i ?>' style = "display:none;" >
+								<?php echo $image; ?>
+								<div class = 'imTitle'> <?php echo $title; ?> </div>
+								<div class = 'imContent'> <?php echo $content; ?> </div>
+								</div>
+<?php
+            					$i++;
 							}
 
 						}
 ?>
+					</div>
 					<article style="width:500px;"class="action">
 						<div>
 							<div id="signup" class="signup">Sign Up!</div>
@@ -110,7 +113,45 @@ $(document).ready(function() {
         window.open("<?php echo site_url('/about/'); ?>");
     });
 
- });
+
+//POPULATE ARRAY OF IMAGES THRU PHP
+//DISPLAY IMAGES WITH THESE FUNCTIONS
+//MAY HAVE TO EDIT WHAT HAS BEEN DONE IN ABOVE HTML
+/*function changeImage()
+{
+    var img = document.getElementById("img");
+    img.src = images[x];
+    x++;
+
+    if(x >= images.length){
+        x = 0;
+    } 
+
+    fadeImg(img, 100, true);
+    setTimeout("changeImage()", 30000);
+}
+
+function fadeImg(el, val, fade){
+    if(fade === true){
+        val--;
+    }else{
+        val ++;
+    }
+
+    if(val > 0 && val < 100){
+        el.style.opacity = val / 100;
+        setTimeout(function(){fadeImg(el, val, fade);}, 10);
+    }
+}
+
+var images = [],
+x = 0;
+
+images[0] = "image1.jpg";
+images[1] = "image2.jpg";
+images[2] = "image3.jpg";
+setTimeout("changeImage()", 30000);*/
+
 </script>
 			</header>
 <!-- HEADER END -->
