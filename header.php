@@ -28,20 +28,23 @@
 			<header>
 				<section>
 					<a href="http://osi.ucf.edu/vucf"><img style="margin-right:100px;"src="<?php echo get_stylesheet_directory_uri(); ?>/resources/logo.png"></img></a>
-<?php
-					if(is_page('Home')){
-							echo do_shortcode('[advps-slideshow optset="1"]');
-						}
-?>
-
-					<article style="width:500px;"class="action">
+					<div style="width:500px;"class="action">
 						<div>
 							<div id="signup" class="signup">Sign Up!</div>
 							<div id="about" class="about">Learn More!</div>
 							<div id="facebook" class="facebook"><img style="width:50px;" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/facebook.png"></img>Like us on Facebook!</div>
 							<div id="twitter" class="twitter"><img style="width:50px;" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/twitter.png"></img>Follow us on Twitter!</div>
 						</div>
-					</article>
+					</div>
+<?php
+					if(is_page('Home')){
+							?><div class="slideContainer"><?php
+							echo do_shortcode('[advps-slideshow optset="1"]');
+							?></div><?php
+						}
+?>
+
+					
 				</section>
 					<div class="screen-reader-text skip-link"><a href="#UPDATE ME" title="Skip to content">Skip to content</a></div>
 					<div class="compact-menu">
