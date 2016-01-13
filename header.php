@@ -28,17 +28,22 @@
 			<header>
 				<section>
 					<a href="http://osi.ucf.edu/vucf"><img style="margin-right:100px;"src="<?php echo get_stylesheet_directory_uri(); ?>/resources/logo.png"></img></a>
-					<div style="width:500px;"class="action">
+					<div style="width:675px;"class="action">
 						<div>
-							<div id="signup" class="signup">Sign Up!</div>
-							<div id="about" class="about">Learn More!</div>
-							<div id="facebook" class="facebook"><img style="width:50px;" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/facebook.png"></img>Like us on Facebook!</div>
-							<div id="twitter" class="twitter"><img style="width:50px;" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/twitter.png"></img>Follow us on Twitter!</div>
+							<div>
+								<div id="signup" class="signup">Sign Up!</div>
+								<div id="about" class="about">Learn More!</div>
+							</div>
+							<div style="float:right;">
+								<div id="facebook" class="facebook"><img style="width:50px;margin-right:15px;" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/facebook.svg"></img><div style="float:right;line-height:60px;">Like us on Facebook!</div></div>
+								<div id="twitter" class="twitter"><img style="width:50px;margin-right:5px;" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/twitter.svg"></img><div style="float:right;line-height:60px;">Follow us on Twitter!</div></div>
+							</div>
 						</div>
 					</div>
 <?php
-					if(is_page('Home')){
-							?><div class="slideContainer"><?php
+					if(is_page('Home')){?>
+							<div><img style="width:500px;margin-left:730px;position:relative;top:10px;fill:white;" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/testcal.svg"></img></div>
+							<div style="margin-top:-70px;" class="slideContainer"><?php
 							echo do_shortcode('[advps-slideshow optset="1"]');
 							?></div><?php
 						}
