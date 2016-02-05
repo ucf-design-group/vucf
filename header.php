@@ -37,6 +37,7 @@
 							<div style="float:right;">
 								<div id="facebook" class="facebook"><img style="width:50px;margin-right:15px;" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/facebook.svg"></img><div style="float:right;line-height:60px;">Like us on Facebook!</div></div>
 								<div id="twitter" class="twitter"><img style="width:50px;margin-right:5px;" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/twitter.svg"></img><div style="float:right;line-height:60px;">Follow us on Twitter!</div></div>
+								<div id="instagram" class="instagram"><img style="width:50px;margin-right:5px;" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/instagram.svg"></img><div style="float:right;line-height:60px;">Follow us on Instagram!</div></div>
 							</div>
 						</div>
 					</div>
@@ -102,7 +103,10 @@ $(document).ready(function() {
         window.open("https://www.facebook.com/volunteerucf/");
     });
     $("#twitter").on("click", function() {
-        window.open("<?php echo site_url('/about/'); ?>");
+        window.open("https://twitter.com/VolunteerUCF?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor");
+    });
+    $("#instagram").on("click", function() {
+        window.open("https://www.instagram.com/volunteerucf/");
     });
 });
 </script>

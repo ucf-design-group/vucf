@@ -1,21 +1,37 @@
 <?php /* Template Name: Home */ ?>
 
 <?php get_header(); ?>
+			<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 			<div class="content-area">
-				<div class="main"> 
-					<h1 style="font-family: kgsecondchances;">mission statement</h1>
-					<?php
-					while (have_posts()) {
-						the_post();
-						get_template_part( 'content', 'page' );
-					} ?>
-				</div>
+				
+			<section class="updates">
+					<div class="main"> 
+						<h1 style="font-family: kgsecondchances;">mission statement</h1>
+						<?php
+						while (have_posts()) {
+							the_post();
+							get_template_part( 'content', 'page' );
+						} ?>
+					</div>
+				</section>
+
+				<section class="events">
+					<div style="margin-left:100px" class="fb-page" data-href="https://www.facebook.com/volunteerucf/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/volunteerucf/"><a href="https://www.facebook.com/volunteerucf/">Volunteer UCF</a></blockquote></div></div>
+				</section>
+				
 
 				<section class="otherPrograms">
 					<h1 style="font-family: kgsecondchances;">our other programs</h1>
 					<div style="margin-left:90px;margin-bottom:40px;">
-						<a href="http://osi.ucf.edu/knightsgiveback"><img style="width:350px;position:relative;bottom:30px;margin-right:430px;"src="<?php echo get_stylesheet_directory_uri(); ?>/resources/KGB.png"></img></a>
+						<a href="http://osi.ucf.edu/vucf/community-connector-program"><img style=" width: 320px;position: relative;bottom: -50px;margin-right: 430px;"src="<?php echo get_stylesheet_directory_uri(); ?>/resources/cclogo.png"></img></a>
 						<a href="http://osi.ucf.edu/abp/"><img style="width:200px;"src="<?php echo get_stylesheet_directory_uri(); ?>/resources/ABP.png"></img></a>
 					</div>
 				</section>
