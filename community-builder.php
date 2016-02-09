@@ -14,7 +14,11 @@
 						get_template_part( 'content', 'page' );
 					} ?>
 				</section>
-				<aside>
+				<aside style="float: right;
+    margin-right: 100px;
+    position: relative;
+    text-align: right;
+    bottom: 375px;">
 					<h1>community connectors</h1>
 <?php
 							$leaderLoop = new WP_QUERY(array('post_type' => 'comcon', 'posts_per_page' => -1, 'orderby' =>'meta_value', 'order' => 'ASC'));
@@ -28,15 +32,23 @@
 								$position = get_post_meta($post->ID, 'comcon-form-position', true);
 								$email = get_post_meta($post->ID, 'comcon-form-email', true);
 ?>	
-									<div>
+									<div style="margin-bottom:-100px">
 										<?php echo $image; ?>
-										<div class = "nameBox">
+										<div class = "nameBox" style="    width: 300px;
+    position: relative;
+    right: 50px;
+    bottom: 200px;">
 											<h3><?php echo $title;?></h3>
 											<p style="font-size:14px;"><?php echo $content; ?></p>
 										</div>
 									</div>
 									<div>
-									<p style="font-size:16px;margin-top:1px;margin-bottom:20px;text-align:center;width:300px;"><?php echo $position; ?> - <?php echo $major; ?></p>
+									<p style="    font-size: 16px;
+    margin-top: 1px;
+    position: relative;
+    width: 300px;
+    bottom: 200px;
+    right: 50px;"><?php echo $position; ?> - <?php echo $major; ?></p>
 									</div>
 
 
